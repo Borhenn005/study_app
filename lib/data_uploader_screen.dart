@@ -16,8 +16,8 @@ class DataUploaderScreen extends StatelessWidget {
       body: Center(
         child: Obx(
           () => controller.loadingStatus.value == LoadingStatus.completed 
-            ? Text('uploading completed ') 
-            : Text('uploading'),
+            ? const Text('uploading completed ') 
+            : const Text('uploading'),
           )
       ),
     );

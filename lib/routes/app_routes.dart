@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:study_app/controllers/question_paper/question_paper_controller.dart';
+import 'package:study_app/screens/home/home_screen.dart';
 import 'package:study_app/screens/introduction/introduction.dart';
 import 'package:study_app/screens/splash/splash_screen.dart';
 
@@ -12,5 +14,11 @@ class AppRoutes {
           name: '/introduction',
           page: () => const AppIntroductionScreen(),
         ),
+        GetPage(
+            name: '/home',
+            page: () => const HomeScreen(),
+            binding: BindingsBuilder(() {
+              Get.put(QuestionPaperController());
+            })),
       ];
 }
